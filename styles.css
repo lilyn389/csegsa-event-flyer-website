@@ -1,0 +1,136 @@
+h{
+	color: #500000;
+	font-size: 300%;
+}
+p{
+	color: #500000;
+	font-family: "Crimson Text", "Georgia", serif;
+	font-size: 100%;
+	border:1px solid #500000;
+	padding: 30 px;
+	margin: 30 px;
+}
+
+.title{
+	position: absolute;
+	width: 500px;
+	height: 260px;
+	left: 23px;
+	top: -50px;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 100px;
+	line-height: 117px;
+
+	color: #FFFFFF;
+}
+
+.t1{
+  position: absolute;
+	width: 163px;
+	height: 34px;
+	left: 27px;
+	top: 84px;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 19px;
+	line-height: 22px;
+
+	color: #FFFFFF;
+}
+.t2 {
+  	position: absolute;
+	width: 129px;
+	height: 38px;
+	left: 233px;
+	top: 84px;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 21px;
+
+	color: #FFFFFF;
+}
+.t3{
+  	position: absolute;
+	width: 501px;
+	height: 36px;
+	left: 25px;
+	top: 101px;
+
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 28px;
+
+	color: #FFFFFF;
+}
+.white_border{
+	border: 1px solid #FFFFFF;
+}
+
+.maroon_background{
+	background-color: #500000;
+}
+
+.opensans_txt{
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.tungsten_txt{
+	font-family: "Tungsten A", "Tungsten B", sans-serif;
+}
+.moriston_txt{
+	font-family: "Moriston", sans-serif;
+}
+
+.maroon_txt{
+	color: #500000;
+}
+
+.white_txt{
+	color: #FFFFFF;
+}
+
+.blue_txt{
+	color: #003C71;
+}
+
+.green_txt{
+	color: #5B6236;
+}
+
+.brown_txt{
+	color: #744F28;
+}
+
+.gold_txt{
+	color: #998542;
+}
+
+.black_txt{
+	color: #332C2C;
+}
+
+.grey_txt{
+	color: #707373;
+}
+
+.tan_txt{
+	color: #D6D3C4;
+}
+
+.yellow_txt{
+	color: #FCE300;
+}
+
+.red_txt{
+	color: #E4002B;
+}
+

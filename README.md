@@ -1,0 +1,1 @@
+This is A Series of Unfortunate Events repository for our CSEGSA service project. CSEGSA stands for Computer Science and Engineering Graduate Student Association. They have enlisted our help in making a heroku app that will display event flyers on televisions they have in the CS Grad lounge in HRBB.

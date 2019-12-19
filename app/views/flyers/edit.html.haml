@@ -1,0 +1,28 @@
+
+-# edit.html.haml using partial
+
+%h2 Edit Existing Flyer
+
+= form_for @flyer, :method => :put do |f|
+
+  = label :flyer, :title, 'Title'
+  = text_field :flyer, 'title', :required => true
+  
+  = label :flyer, :description, 'Description'
+  = text_field :flyer, 'description', :required => true
+
+  = label :flyer, :event_date, 'Event Date'
+  = datetime_select :flyer, :event_date, :required => true
+
+  = label :flyer, :location, 'Location'
+  = text_field :flyer, 'location', :required => true
+
+  = label :flyer, :display_date, 'Display Date'
+  = datetime_select :flyer, :display_date, :required => true
+  
+  = f.hidden_field :uploader, :value => current_user.email
+  %br
+  %br
+
+  = submit_tag 'Update Flyer Info', :class => 'btn btn-primary'
+  

@@ -1,0 +1,197 @@
+.bg-primary {
+    background-color: #500000 !important;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: White;
+    color: DarkSlateGrey;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 10pt;
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    margin: 0;
+    padding: 0 20px 20px;
+}
+
+a {
+    background: transparent;
+    color: maroon;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.wrapper {
+    background: #332C2C;
+    height: 25px;
+    text-align: right;
+    padding-right: 15px;
+}
+.wrapper a {
+    color: white;
+    font-size: 15px;
+}
+/* Make the sign-in/out buttons look like links */
+.wrapper input {
+    background-color: #332C2C;
+    color: white;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.tit {
+    position: static;
+    margin-bottom: 20px;
+    margin-top: -15px;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.t1 {
+    position: static;
+    margin-top: 25px;
+    margin-left: -179px;
+    font-size: 11px;
+}
+.t2{
+    position: static;
+    margin-top: 24px;
+    margin-left: 27px;
+    font-size: 10px;
+}
+.t3 {
+    position: static;
+    margin-left: -177px;
+    margin-top: 45px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    word-spacing: -3px;
+}
+.img{
+  margin-left: 450px;  
+}
+
+#flyers {
+    margin: 10px;
+    border-collapse: collapse;
+    width: 100%;
+    border-bottom: 2px solid black;
+}
+
+#flyers th {
+    border: 2px solid white;
+    font-weight: bold;
+    background-color: wheat;
+}
+
+#flyers th,
+#flyers td {
+    padding: 4px;
+    text-align: left;
+}
+
+#notice #warning {
+    background: rosybrown;
+    margin: 1em 0;
+    padding: 4px;
+}
+
+form label {
+    display: block;
+    line-height: 25px;
+    font-weight: bold;
+    color: maroon;
+}
+
+
+
+#flyers .hilite {
+    background-color: yellow;
+}
+
+.btn {
+    padding: 6px 10px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    background: pink;
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: maroon;
+    color: white;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: pink;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: pink;
+    box-shadow: none;
+}
+
+.btn-primary:disabled, .btn-primary.disabled {
+    background: grey;
+    box-shadow: none;
+}
+
+.bt-primary:disabled:hover, .btn-primary.disabed.hover {
+    background: grey;
+}
+
+.btn-primary:active:hover, .btn-primary.active.hover {
+    background: pink ;
+    box-shadow: none;
+}
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+a:active{
+    text-decoration: none;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th a{
+  background-color: pink;
+  color: maroon;
+}
+
+tr:hover td a {
+    color: maroon;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+

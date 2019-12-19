@@ -1,0 +1,43 @@
+-# in app/views/flyers/show.html.haml
+
+%h3 Details about archived #{@flyer.title}
+
+%ul#details
+  %li
+    Event Date:
+    = @flyer.event_date.strftime("%B %d, %Y")
+  %li
+    Start Disply Date:
+    = @flyer.display_date.strftime("%B %d, %Y")
+  %li
+    Event Location:
+    = @flyer.location
+  %li
+    Last Edited by:
+    = @flyer.uploader
+    %br
+
+= button_to 'Edit', edit_flyer_path(@flyer),:method => :get, :class => 'btn btn-primary'
+%br
+
+%h4 Description:
+
+%p#description= @flyer.description
+%p
+= image_tag(@flyer.image.url, class: 'media-object')
+%br
+%br
+
+- if @flyer.event_date < Date.today
+  <br>Flyer event date must be on or after 
+  =Date.today.strftime("%B %d, %Y")
+  to unarchive.
+-else
+  %br
+= form_for @flyer, :method => :put do |f|
+  = f.hidden_field :is_live, :value => '1'
+  = f.submit "Unarchive", :disabled => @flyer.event_date < Date.today, :class => 'btn btn-primary'
+%br
+= button_to 'Delete', flyer_path(@flyer), :method => :delete, :onclick => "return confirm('Are you sure you want to delete this flyer?')", :class => 'btn btn-primary'
+%br
+= link_to 'Back to archived flyer list', flyers_archive_path,  :id => "ut",:class => 'btn btn-primary'

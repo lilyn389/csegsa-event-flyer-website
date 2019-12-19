@@ -1,0 +1,13 @@
+!!!
+%html
+  %body
+    :css
+      #clearance {
+        padding-top: 15px;
+        width: 100%;
+      }
+    #clearance.sign-in
+      %h2.sg1 Sign In
+      = render partial: '/sessions/form'
+      = link_to 'Slideshow', flyers_slideshow_path
+    

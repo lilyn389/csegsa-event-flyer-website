@@ -1,0 +1,43 @@
+-# in app/views/flyers/show.html.haml
+
+%h3 Details about #{@flyer.title}
+
+%ul#details
+  %li
+    Event Date:
+    = @flyer.event_date.strftime("%B %d, %Y")
+  %li
+    Start Disply Date:
+    = @flyer.display_date.strftime("%B %d, %Y")
+  %li
+    Event Location:
+    = @flyer.location
+  %li
+    Last Edited by:
+    = @flyer.uploader
+    %br
+    
+= button_to 'Edit', edit_flyer_path(@flyer),:method => :get, :class => 'btn btn-primary'
+%br
+
+%h4 Description:
+
+%p#description= @flyer.description
+%p
+
+
+= image_tag(@flyer.image.url, class: 'media-object')
+%br
+%br
+
+
+
+= form_for @flyer, :method => :put do |f| 
+  = f.hidden_field :is_live, :value => '0'
+  = f.submit "Archive", :class => 'btn btn-primary'
+%br
+= button_to 'Delete', flyer_path(@flyer), :method => :delete, :onclick => "return confirm('Are you sure you want to delete this flyer?')", :class => 'btn btn-primary'
+%br
+= link_to 'Back to flyer list', flyers_path,:method => :get, :class => 'btn btn-primary'
+
+

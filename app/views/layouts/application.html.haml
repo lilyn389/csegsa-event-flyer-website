@@ -1,0 +1,34 @@
+!!!
+%html
+  %head
+    %link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous")
+    %title CSEGSA
+    = stylesheet_link_tag 'application', 'media' => 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    
+    %body
+      %div.container
+        %div.navbar.navbar-expand-lg.bg-primary.text-white
+          %h1.tit csegsa
+          %h2.t1 Computer Science
+          %h3.t2 & Engineering
+          %h4.t3 Graduate Student Association
+          
+        .wrapper
+          // "Sign Out" has to be a button, so might as well make "Sign In" a button too
+          - if signed_in?
+            = button_to "Sign Out", sign_out_path, method: :delete
+          - else
+            = button_to "Sign In", "/sign_in", method: :get
+          // %img{:alt => "logo", :border => "0", :src => "https://i.ibb.co/LkGKx2g/logo.png"}
+
+        #main
+          - if flash[:notice]
+            %div.alert.alert-danger
+              #notice.message= flash[:notice]
+          - elsif flash[:warning]
+            %div.alert.alert-danger
+              #warning.message= flash[:warning]
+
+          = yield

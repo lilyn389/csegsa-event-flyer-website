@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel="stylesheet" type="text/css" href="./styles.css"  />
+<style>
+html {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+* {box-sizing: border-box;}
+
+#flyer {
+	width: 100%;
+	height: 100%;
+}
+.section {
+	text-align: center;
+	display: table;
+	width: 100%;
+}
+
+h1 {
+	margin: auto;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 4em;
+	width: 100%;
+	height: 100%;
+}
+h2 {
+	margin: auto;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 2.5em;
+	width: 100%;
+	height: 100%;
+}
+h3 {
+	margin: auto;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 2em;
+	width: 100%;
+	height: 100%;
+}
+</style>
+</head>
+<body>
+	<div id="flyer">
+		<div class="section" style="height:15%;"></div>
+		<div class="section" style="height:20%;"><h2 id="timeAndPlace"></h2></div>
+		<div class="section" style="height:30%;"><h1 id="name" class="opensans_txt maroon_txt"></h1></div>
+		<div class="section" style="height:20%;"><h3 id="description"></h3></div>
+		<div class="section" style="height:15%;"></div>
+	</div>
+<script>
+	const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	
+	var eventName = "Weekend Kickoff";
+	var startTime = new Date("Tue Oct 22 2019 15:30:00 GMT-0500 (Central Daylight Time)");
+	var eventLocation = "HRBB 310";
+	var description = "Come have some free food & snacks with other CSE grad students and faculty!";
+
+	document.getElementById("name").innerText = eventName;
+	document.getElementById("timeAndPlace").innerText = "Join us " + getTimeAndPlace(startTime)
+	document.getElementById("description").innerText = description;
+	
+	//import("http://localhost:8000/html-to-image-master/")
+	//	.then((htmlToImage) => {
+	//		htmlToImage.toJpeg(document.getElementById("flyer"))
+	//			.then(function(dataUrl) {
+	//				download(dataUrl, "flyer" + startTime.toDateString() + ".jpg");
+	//			});
+	//	});
+	
+	function getTimeAndPlace(d) {
+		return getDayOfWeek(startTime) + " the " + getDayNumber(startTime) + " at " + getTime(startTime) + " in " + eventLocation;
+	}
+	function getDayOfWeek(d) {
+		return weekday[d.getDay()];
+	}
+	function getDayNumber(d) {
+		return d.getDate() + getDateSuffix(d.getDate());
+	}
+	function getDateSuffix(d) {
+		if (d > 3 && d < 21) return 'th';
+		switch (d % 10) {
+			case 1:  return "st";
+			case 2:  return "nd";
+			case 3:  return "rd";
+			default: return "th";
+		}
+	}
+	function getTime(d) {
+		var hour = 0;
+		var suffix = "a.m.";
+		if(d.getHours() == 0) {
+			hour = 12;
+		}
+		if(d.getHours() <= 11) {
+			suffix = "a.m.";
+		}
+		if(d.getHours() >= 12) {
+			suffix = "p.m.";
+		}
+		if(d.getHours() >= 13) {
+			hour = d.getHours() - 12;
+		}
+		return hour + ":" + d.getMinutes() + suffix;
+	}
+</script>
+
+</body>
+</html> 

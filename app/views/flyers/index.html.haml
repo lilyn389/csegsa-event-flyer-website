@@ -1,0 +1,25 @@
+-#  This file is app/views/flyers/index.html.haml
+%h2 Active Flyers
+
+%table#flyers.table.table-striped.table-hover.col-md-12
+  %thead
+    %tr
+      %th Title
+      %th Location
+      %th Event Date
+      %th Uploaded by:
+      %th Image
+      %th More Info
+  %tbody
+    - @flyers.each do |flyer|
+      %tr
+        %td= flyer.title
+        %td= flyer.location
+        %td= flyer.event_date
+        %td= flyer.uploader
+        %td= image_tag(flyer.image.url(:thumb), class: 'media-object')
+        %td= link_to "More about #{flyer.title}", flyer_path(flyer)
+
+= link_to 'Add a new flyer', new_flyer_path, :class => 'btn btn-primary'
+= link_to 'Slideshow', flyers_slideshow_path, :class => 'btn btn-primary'
+= link_to 'Archive', flyers_archive_path, :class => 'btn btn-primary'
